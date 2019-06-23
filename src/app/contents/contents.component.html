@@ -1,3 +1,17 @@
-<p>
-  My fridge has {{content}}.
-</p>
+<div>
+  <h2>My Fridge has the following:</h2>
+</div>
+<table align="center" border='2px'>
+  <tr style="text-align: center">
+    <td>ID</td>
+    <td>NAME</td>
+    <td>QTY</td>
+    <td>DESCRIPTION</td>
+  </tr>
+  <tr>
+    <td>{{content.id}}</td>
+    <td>{{content.name | titlecase}}</td>
+    <td>{{content.quantity}}</td>
+    <td>{{content.description}}</td>
+  </tr>
+</table>

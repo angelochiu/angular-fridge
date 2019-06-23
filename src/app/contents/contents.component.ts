@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Item } from '../item';
+
 @Component({
   selector: 'app-contents',
   templateUrl: './contents.component.html',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentsComponent implements OnInit {
 
-  content="apple"
+  content: Item = {
+    id: 1,
+    name: 'apple',
+    quantity: 5,
+    description: 'brandless red'
+  };
 
   constructor() { }
 
