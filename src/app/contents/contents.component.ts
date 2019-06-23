@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentsComponent implements OnInit {
 
+  content="apple"
+
   constructor() { }
 
   ngOnInit() {
