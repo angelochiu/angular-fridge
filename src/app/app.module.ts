@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ContentsComponent } from './contents/contents.component';
 
+import { ITEMS } from './mock-items';
+
 @NgModule({
   declarations: [
     AppComponent,

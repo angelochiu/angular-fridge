@@ -3,15 +3,21 @@
 </div>
 <table align="center" border='2px'>
   <tr style="text-align: center">
-    <td>ID</td>
+    <!-- <td>ID</td> -->
     <td>NAME</td>
     <td>QTY</td>
     <td>DESCRIPTION</td>
   </tr>
-  <tr>
-    <td>{{content.id}}</td>
+  <tr *ngFor="let content of items">
+    <!-- <td >{{content.id}}</td> -->
     <td>{{content.name | titlecase}}</td>
     <td>{{content.quantity}}</td>
     <td>{{content.description}}</td>
+    <td>
+      <button>edit</button>
+    </td>
+    <td>
+      <button>delete</button>
+    </td>
   </tr>
 </table>
