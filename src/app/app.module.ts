@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { ContentsComponent } from './contents/contents.component';
 
 import { ITEMS } from './mock-items';
+import { EditItemDetailComponent } from './edit-item-detail/edit-item-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContentsComponent
+    ContentsComponent,
+    EditItemDetailComponent
   ],
   imports: [
     BrowserModule,
