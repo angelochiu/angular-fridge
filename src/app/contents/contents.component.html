@@ -8,16 +8,16 @@
     <td>QTY</td>
     <td>DESCRIPTION</td>
   </tr>
-  <tr *ngFor="let content of items">
-    <!-- <td >{{content.id}}</td> -->
-    <td>{{content.name | titlecase}}</td>
-    <td>{{content.quantity}}</td>
-    <td>{{content.description}}</td>
+  <tr *ngFor="let item of items">
+    <!-- <td >{{item.id}}</td> -->
+    <td>{{item.name | titlecase}}</td>
+    <td>{{item.quantity}}</td>
+    <td>{{item.description}}</td>
     <td>
-      <button name="{{content.id}}-{{content.name}}" (click)=editItem(content)>edit</button>
+      <button name="{{item.id}}-{{item.name}}" (click)=editItem(item)>edit</button>
     </td>
     <td>
-      <button name="{{content.id}}-{{content.name}}">delete</button>
+      <button name="{{item.id}}-{{item.name}}">delete</button>
     </td>
   </tr>
 </table>
@@ -29,7 +29,7 @@
     Name: <input [(ngModel)]="editingItem.name"/>
   </div>
   <div>
-      Quantity: <input [(ngModel)]="editingItem.quantity"/>
+    Quantity: <input [(ngModel)]="editingItem.quantity"/>
   </div>
   <div>
     Description: <input [(ngModel)]="editingItem.description"/>
