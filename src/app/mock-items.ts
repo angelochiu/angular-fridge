@@ -1,7 +1,7 @@
 import { Item } from './item';
 
 export const ITEMS: Item[] = [
-    { id: 11, name: 'Banana', quantity: 5, description: 'green and unripe'},
+    { id: 11, name: 'banana', quantity: 5, description: 'green and unripe'},
     { id: 12, name: 'cabbage', quantity: 1, description: 'fresh'},
     { id: 13, name: 'dills', quantity: 25, description: 'pickled'},
     { id: 14, name: 'eggplant', quantity: 3, description: 'round'},
