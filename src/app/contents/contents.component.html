@@ -14,24 +14,17 @@
     <td>{{item.quantity}}</td>
     <td>{{item.description}}</td>
     <td>
-      <button name="{{item.id}}-{{item.name}}" (click)=editItem(item)>edit</button>
+      <button 
+        name="{{item.id}}-{{item.name}}"
+        [class.selected]="item === editingItem"
+        (click)=editItem(item)
+      >
+        edit
+      </button>
     </td>
     <td>
       <button name="{{item.id}}-{{item.name}}">delete</button>
     </td>
   </tr>
 </table>
-<div *ngIf="editingItem">
-  <h2>
-    Edit: {{editingItem.name | titlecase}}
-  </h2>
-  <div>
-    Name: <input [(ngModel)]="editingItem.name"/>
-  </div>
-  <div>
-    Quantity: <input [(ngModel)]="editingItem.quantity"/>
-  </div>
-  <div>
-    Description: <input [(ngModel)]="editingItem.description"/>
-  </div>
-</div>
+<app-edit-item-detail [item]="editingItem"></app-edit-item-detail>

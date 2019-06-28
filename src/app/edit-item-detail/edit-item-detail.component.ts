@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Item } from '../item';
 
 @Component({
   selector: 'app-edit-item-detail',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-item-detail.component.css']
 })
 export class EditItemDetailComponent implements OnInit {
+
+  @Input() item: Item;
 
   constructor() { }
 

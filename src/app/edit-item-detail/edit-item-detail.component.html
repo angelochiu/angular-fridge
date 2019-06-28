@@ -1,3 +1,17 @@
-<p>
-  edit-item-detail works!
-</p>
+<div *ngIf="item">
+    <h2>
+      Edit: {{item.name | titlecase}}
+    </h2>
+    <div>
+      Id: {{item.id}}
+    </div>
+    <div>
+      Name: <input [(ngModel)]="item.name"/>
+    </div>
+    <div>
+      Quantity: <input [(ngModel)]="item.quantity"/>
+    </div>
+    <div>
+      Description: <input [(ngModel)]="item.description"/>
+    </div>
+  </div>
