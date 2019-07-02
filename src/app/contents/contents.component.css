@@ -1,0 +1,8 @@
+mat-table {
+    width: 80%;
+}
+
+mat-row:hover {
+    color: beige;
+    background: mediumseagreen;
+}

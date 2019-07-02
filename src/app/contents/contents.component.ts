@@ -1,24 +1,31 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
-import { Item } from '../item';
-import { ITEMS } from '../mock-items';
+import { Item } from "../item";
+import { ITEMS } from "../mock-items";
 
 @Component({
-  selector: 'app-contents',
-  templateUrl: './contents.component.html',
-  styleUrls: ['./contents.component.css']
+  selector: "app-contents",
+  templateUrl: "./contents.component.html",
+  styleUrls: ["./contents.component.css"]
 })
 export class ContentsComponent implements OnInit {
-
   items = ITEMS;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   editingItem: Item;
   editItem(editingItem: Item): void {
     this.editingItem = editingItem;
   }
+
+  displayedColumns: string[] = [
+    "name",
+    "quantity",
+    "description",
+    "edit",
+    "delete"
+  ];
+  dataSource = this.items;
 }

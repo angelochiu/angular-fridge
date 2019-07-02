@@ -1,30 +1,49 @@
 <div>
   <h2>My Fridge has the following:</h2>
 </div>
-<table align="center" border='2px'>
-  <tr style="text-align: center">
-    <!-- <td>ID</td> -->
-    <td>NAME</td>
-    <td>QTY</td>
-    <td>DESCRIPTION</td>
-  </tr>
-  <tr *ngFor="let item of items">
-    <!-- <td >{{item.id}}</td> -->
-    <td>{{item.name}}</td>
-    <td>{{item.quantity}}</td>
-    <td>{{item.description}}</td>
-    <td>
-      <button 
+
+<mat-table [dataSource]="dataSource">
+  
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.id}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>NAME</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.name}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="quantity">
+    <mat-header-cell *matHeaderCellDef>QUANTITY</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.quantity}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef>DESCRIPTION</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.description}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="edit">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let item">
+      <button mat-flat-button
         name="{{item.id}}-{{item.name}}"
         [class.selected]="item === editingItem"
         (click)=editItem(item)
-      >
-        edit
-      </button>
-    </td>
-    <td>
-      <button name="{{item.id}}-{{item.name}}">delete</button>
-    </td>
-  </tr>
-</table>
+      >EDIT</button>
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="delete">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let item">
+      <button mat-flat-button>DELETE</button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
 <app-edit-item-detail [item]="editingItem"></app-edit-item-detail>
