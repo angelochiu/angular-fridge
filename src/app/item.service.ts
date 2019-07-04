@@ -1,9 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+
+import { Item } from "./item";
+import { ITEMS } from "./mock-items";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class ItemService {
+  constructor() {}
 
-  constructor() { }
+  getItems(): Item[] {
+    return ITEMS;
+  }
 }

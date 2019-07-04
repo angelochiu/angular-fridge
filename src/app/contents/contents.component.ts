@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 
 import { Item } from "../item";
-import { ITEMS } from "../mock-items";
+import { ItemService } from "../item.service";
 
 @Component({
   selector: "app-contents",
@@ -9,11 +9,13 @@ import { ITEMS } from "../mock-items";
   styleUrls: ["./contents.component.css"]
 })
 export class ContentsComponent implements OnInit {
-  items = ITEMS;
+  items: Item[];
 
-  constructor() {}
+  constructor(private itemService: ItemService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getItems();
+  }
 
   editingItem: Item;
   editItem(editingItem: Item): void {
@@ -27,5 +29,8 @@ export class ContentsComponent implements OnInit {
     "edit",
     "delete"
   ];
-  dataSource = this.items;
+
+  getItems(): void {
+    this.items = this.itemService.getItems();
+  }
 }

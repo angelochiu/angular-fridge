@@ -1,9 +1,8 @@
 <div>
-  <h2>My Fridge has the following:</h2>
+  <h2>My fridge has the following:</h2>
 </div>
 
-<mat-table [dataSource]="dataSource">
-  
+<mat-table [dataSource]="items">
   <ng-container matColumnDef="id">
     <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
     <mat-cell *matCellDef="let item">{{item.id}}</mat-cell>
