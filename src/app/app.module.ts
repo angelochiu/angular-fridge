@@ -6,7 +6,6 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { ContentsComponent } from "./contents/contents.component";
 
-import { ITEMS } from "./mock-items";
 import { EditItemDetailComponent } from "./edit-item-detail/edit-item-detail.component";
 
 import { MatTableModule } from "@angular/material";
