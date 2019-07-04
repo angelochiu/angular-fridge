@@ -12,9 +12,10 @@ import { MatTableModule } from "@angular/material";
 import { CdkTableModule } from "@angular/cdk/table";
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, ContentsComponent, EditItemDetailComponent, MessagesComponent],
+  declarations: [AppComponent, ContentsComponent, EditItemDetailComponent, MessagesComponent, DashboardComponent],
   imports: [BrowserModule, FormsModule, MatTableModule, CdkTableModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
