@@ -10,9 +10,10 @@ import { EditItemDetailComponent } from "./edit-item-detail/edit-item-detail.com
 
 import { MatTableModule } from "@angular/material";
 import { CdkTableModule } from "@angular/cdk/table";
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
-  declarations: [AppComponent, ContentsComponent, EditItemDetailComponent],
+  declarations: [AppComponent, ContentsComponent, EditItemDetailComponent, MessagesComponent],
   imports: [BrowserModule, FormsModule, MatTableModule, CdkTableModule],
   providers: [],
   bootstrap: [AppComponent]
