@@ -31,6 +31,7 @@ export class ContentsComponent implements OnInit {
   ];
 
   getItems(): void {
-    this.items = this.itemService.getItems();
+    //this.items = this.itemService.getItems();
+    this.itemService.getItems().subscribe(items => (this.items = items));
   }
 }
