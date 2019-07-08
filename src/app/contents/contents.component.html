@@ -27,10 +27,14 @@
     <mat-header-cell *matHeaderCellDef></mat-header-cell>
     <mat-cell *matCellDef="let item">
       <button mat-flat-button
-        name="{{item.id}}-{{item.name}}"
         [class.selected]="item === editingItem"
         (click)=editItem(item)
-      >EDIT</button>
+        routerLink="/edit/{{item.id}}"
+      >
+        <!-- <a routerLink="/edit/{{item.id}}"> -->
+          EDIT
+        <!-- </a> -->
+      </button>
     </mat-cell>
   </ng-container>
 
